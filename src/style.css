@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #4c4541;
+  --color-primary-strong: #332f2c;
+  --color-primary-muted: #756b64;
+  --color-secondary: #f2c46a;
+  --color-secondary-soft: #f8dfaa;
+  --color-background: #fcf0da;
+  --color-background-subtle: #fff8eb;
+  --color-surface: #fffaf1;
+  --color-border: #ddcdb2;
+  --color-focus: #8a651e;
+  --color-error-soft: #f9d7d0;
+  --color-text: var(--color-primary);
+  --color-text-muted: var(--color-primary-muted);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius-card: 0.75rem;
+  --type-title: clamp(1.75rem, 1.2rem + 1.4vw, 2.4rem);
+  --type-section: clamp(1.15rem, 1rem + 0.45vw, 1.4rem);
+  --type-body: 1rem;
+  --type-meta: 0.875rem;
+
+  color: var(--color-text);
+  color-scheme: light;
+  background: var(--color-background);
+}
+
+:root[data-theme="dark"] {
+  --color-primary: #e1d6ca;
+  --color-primary-strong: #f5ebdf;
+  --color-primary-muted: #b4a898;
+  --color-secondary: #7a5b27;
+  --color-secondary-soft: #3a3020;
+  --color-background: #181613;
+  --color-background-subtle: #211f1b;
+  --color-surface: #26231e;
+  --color-border: #494238;
+  --color-focus: #f4ce7d;
+  --color-error-soft: #4a2925;
+  color-scheme: dark;
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-primary);
+}
+
+body {
+  margin: 0;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: var(--type-body);
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}

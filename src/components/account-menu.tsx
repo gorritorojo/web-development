@@ -1,7 +1,7 @@
 import type { User } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useTheme } from '../contexts/theme-context.tsx';
+import { useTheme } from '../contexts/theme-context';
 import supabase from '../utils/supabase';
 
 function UserIcon() {
@@ -32,7 +32,7 @@ function UserIcon() {
 
 function AccountMenu() {
     const navigate = useNavigate();
-    const { theme, toggleTheme } = useTheme();
+    const { toggleTheme } = useTheme();
     const menuRef = useRef<HTMLDivElement>(null);
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);

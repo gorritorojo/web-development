@@ -1,6 +1,8 @@
 # Honya
 
-Honya is a book discovery app for searching the Open Library catalog, viewing book details, and managing borrowed books with a Supabase account.
+Honya is a book discovery app for searching the Open Library catalog, viewing book details, and managing borrowed books with a Supabase account
+
+[web-development-rho-eight.vercel.app](https://web-development-rho-eight.vercel.app/)
 
 ## Features
 
@@ -36,6 +38,15 @@ VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
 ```
 
 Book loans use the deployed Supabase Edge Functions: `book-status`, `borrow-book`, `return-book`, and `my-loans`.
+
+## Run Edge Functions (Optional for local development)
+
+If you want to test or develop the Supabase Edge Functions locally (book-status, borrow-book, return-book, and my-loans), start the Supabase local environment:
+
+```sh
+supabase start
+supabase functions serve
+```
 
 ## Available scripts
 

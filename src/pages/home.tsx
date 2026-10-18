@@ -8,7 +8,6 @@ function Home() {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        console.log('se manodo la request del componente home');
         let active = true;
 
         loadHomeBooks()
